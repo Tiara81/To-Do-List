@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>You List</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="img/icon.png" type="image/png" />
+</head>
+
+<body>
+  <div class="todo-app">
+    <h2>To Do List For You <img src="img/icon.png" alt="icon"/></h2>
+    <div class="row">
+      <input type="text" id="taskInput" placeholder="Add a new task..."/>
+      <select id="categorySelect">
+        <option value="General">General</option>
+        <option value="School Tasks">School Tasks</option>
+        <option value="To Buy">To Buy</option>
+        <option value="Chores">Chores</option>
+      </select>
+
+      <button onclick="addTask()">+</button>
+    </div>
+    <div class="filter-row">
+      <label for="filter">Filter by category:</label>
+      <select id="filterSelect" onchange="filterTasks()">
+        <option value="All">All</option>
+        <option value="General">General</option>
+        <option value="School Tasks">School Tasks</option>
+        <option value="To Buy">To Buy</option>
+        <option value="Chores">Chores</option>
+      </select>
+    </div>
+    <ul id="list-container"></ul>
+    
+    <footer>
+      <p>&copy; 2025 Tugas Akhir Semester - Mutiaraningtyas Kurnia</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

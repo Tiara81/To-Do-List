@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #153677, #4e085f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+.todo-app {
+  background-color: #fff;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #002765;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+h2 img {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.row {
+  display: flex;
+  gap: 10px; /* Memberi jarak antar elemen */
+  flex-wrap: wrap; /* Supaya elemen tidak tumpuk jika layar kecil */
+  margin-bottom: 10px;
+}
+
+.row select,
+.row input[type="text"],
+.row button {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Atur tombol agar menonjol dan ukurannya tetap proporsional */
+.row button {
+  background-color: #153677;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  flex: 0.3;
+  max-width: 80px;
+}
+
+.row button:hover {
+  background-color: #6b0086;
+}
+
+ul {
+  padding-left: 0;
+}
+
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+}
+
+ul li:hover {
+  background-color: #e0e0e0;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(img/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+
+ul li.checked {
+  color: #ccc;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(img/checked.png);
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 30px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+}
+
+ul li span:hover {
+  color: #153677;
+}
+
+ul li.dragging {
+  opacity: 0.5;
+  background-color: #3b045a;
+}
+
+.filter-row{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#filterSelect {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #1d056c;
+  flex: 1;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+}
+
+
